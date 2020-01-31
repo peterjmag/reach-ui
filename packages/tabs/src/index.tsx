@@ -93,6 +93,7 @@ export const Tabs = forwardRefWithAs<TabsProps, "div">(function Tabs(
     index: controlledIndex = undefined,
     onChange,
     readOnly = false,
+    orientation = "horizontal",
     ...props
   },
   ref
@@ -203,6 +204,8 @@ export type TabsProps = {
    * @see Docs https://reacttraining.com/reach-ui/tabs#tabs-props
    */
   onChange?: (index: number) => void;
+
+  orientation?: "horizontal" | "vertical";
 };
 
 if (__DEV__) {
@@ -337,6 +340,7 @@ export const TabList = forwardRefWithAs<TabListProps, "div">(function TabList(
       !(
         key === "ArrowLeft" ||
         key === "ArrowRight" ||
+        key === "ArrowUp" ||
         key === "ArrowDown" ||
         key === "Home" ||
         key === "End"
@@ -354,11 +358,17 @@ export const TabList = forwardRefWithAs<TabListProps, "div">(function TabList(
       case "ArrowLeft":
         onSelectTab(isRTL.current ? next : prev);
         break;
-      case "ArrowDown":
-        // don't scroll down
-        event.preventDefault();
-        onFocusPanel();
+      case "ArrowUp":
+        onSelectTab(isRTL.current ? next : prev);
         break;
+      case "ArrowDown":
+        onSelectTab(isRTL.current ? prev : next);
+        break;
+      // case "ArrowDown":
+      //   // don't scroll down
+      //   event.preventDefault();
+      //   onFocusPanel();
+      //   break;
       case "Home":
         onSelectTab(first);
         break;
@@ -428,6 +438,8 @@ export type TabListProps = {
    * @see Docs https://reacttraining.com/reach-ui/tabs#tablist-children
    */
   children?: React.ReactNode;
+
+  orientation?: "horizontal" | "vertical";
 };
 
 if (__DEV__) {
