@@ -250,7 +250,13 @@ if (__DEV__) {
  * @see Docs https://reacttraining.com/reach-ui/tabs#tablist
  */
 export const TabList = forwardRefWithAs<TabListProps, "div">(function TabList(
-  { children, as: Comp = "div", onKeyDown, ...props },
+  {
+    children,
+    as: Comp = "div",
+    orientation = "horizontal",
+    onKeyDown,
+    ...props
+  },
   forwardedRef
 ) {
   const {
@@ -279,14 +285,18 @@ export const TabList = forwardRefWithAs<TabListProps, "div">(function TabList(
 
   let handleKeyDown = wrapEvent(
     function(event: React.KeyboardEvent) {
-      if (event.key === "ArrowDown") {
+      if (
+        orientation === "vertical"
+          ? event.key === "ArrowRight"
+          : event.key === "ArrowDown"
+      ) {
         event.preventDefault();
         onFocusPanel();
       }
     },
     useDescendantKeyDown(TabsDescendantsContext, {
       currentIndex: selectedIndex,
-      orientation: "horizontal",
+      orientation,
       rotate: true,
       callback: onSelectTab,
       filter: tab => !tab.disabled,
@@ -348,6 +358,7 @@ export type TabListProps = {
    * @see Docs https://reacttraining.com/reach-ui/tabs#tablist-children
    */
   children?: React.ReactNode;
+  orientation?: "vertical" | "horizontal";
 };
 
 if (__DEV__) {

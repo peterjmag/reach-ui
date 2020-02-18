@@ -8,7 +8,7 @@ function Example() {
   return (
     <div>
       <Tabs>
-        <TabList>
+        <TabList orientation="vertical">
           <Tab>One</Tab>
           <Tab>Two</Tab>
           <Tab>Three</Tab>
