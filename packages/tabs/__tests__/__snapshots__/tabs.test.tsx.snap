@@ -1,5 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+<<<<<<< HEAD
 exports[`<Tabs /> focuses the correct tab with keyboard navigation (vertical orientation) 1`] = `
 <DocumentFragment>
   <div>
@@ -96,6 +97,9 @@ exports[`<Tabs /> focuses the correct tab with keyboard navigation (vertical ori
 `;
 
 exports[`<Tabs /> focuses the correct tab with keyboard navigation 1`] = `
+=======
+exports[`<Tabs /> user events focuses the correct tab with keyboard navigation 1`] = `
+>>>>>>> upstream/master
 <DocumentFragment>
   <div>
     <div
@@ -108,34 +112,34 @@ exports[`<Tabs /> focuses the correct tab with keyboard navigation 1`] = `
         role="tablist"
       >
         <button
-          aria-controls="tabs--4--panel--0"
+          aria-controls="tabs--REACH-ID--panel--0"
           aria-selected="false"
           class="tab-1"
           data-reach-tab=""
-          id="tabs--4--tab--0"
+          id="tabs--REACH-ID--tab--0"
           role="tab"
           tabindex="-1"
         >
           Tab One
         </button>
         <button
-          aria-controls="tabs--4--panel--1"
+          aria-controls="tabs--REACH-ID--panel--1"
           aria-selected="true"
           class="tab-2"
           data-reach-tab=""
           data-selected=""
-          id="tabs--4--tab--1"
+          id="tabs--REACH-ID--tab--1"
           role="tab"
           tabindex="0"
         >
           Tab Two
         </button>
         <button
-          aria-controls="tabs--4--panel--2"
+          aria-controls="tabs--REACH-ID--panel--2"
           aria-selected="false"
           class="tab-3"
           data-reach-tab=""
-          id="tabs--4--tab--2"
+          id="tabs--REACH-ID--tab--2"
           role="tab"
           tabindex="-1"
         >
@@ -146,10 +150,10 @@ exports[`<Tabs /> focuses the correct tab with keyboard navigation 1`] = `
         data-reach-tab-panels=""
       >
         <div
-          aria-labelledby="tabs--4--tab--0"
+          aria-labelledby="tabs--REACH-ID--tab--0"
           data-reach-tab-panel=""
           hidden=""
-          id="tabs--4--panel--0"
+          id="tabs--REACH-ID--panel--0"
           role="tabpanel"
           tabindex="-1"
         >
@@ -161,9 +165,9 @@ exports[`<Tabs /> focuses the correct tab with keyboard navigation 1`] = `
           </button>
         </div>
         <div
-          aria-labelledby="tabs--4--tab--1"
+          aria-labelledby="tabs--REACH-ID--tab--1"
           data-reach-tab-panel=""
-          id="tabs--4--panel--1"
+          id="tabs--REACH-ID--panel--1"
           role="tabpanel"
           tabindex="0"
         >
@@ -172,9 +176,10 @@ exports[`<Tabs /> focuses the correct tab with keyboard navigation 1`] = `
           </h1>
         </div>
         <div
-          aria-labelledby="tabs--4--tab--2"
+          aria-labelledby="tabs--REACH-ID--tab--2"
           data-reach-tab-panel=""
           hidden=""
+<<<<<<< HEAD
           id="tabs--4--panel--2"
           role="tabpanel"
           tabindex="-1"
@@ -365,6 +370,9 @@ exports[`<Tabs /> should match the snapshot 1`] = `
           data-reach-tab-panel=""
           hidden=""
           id="tabs--1--panel--2"
+=======
+          id="tabs--REACH-ID--panel--2"
+>>>>>>> upstream/master
           role="tabpanel"
           tabindex="-1"
         >
